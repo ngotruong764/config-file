@@ -8,15 +8,22 @@ spring:
   application:
     name: account
   datasource:
-    url: jdbc:mysql://localhost:3307/accountsdb
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root # default name
-    password: root # default password
+    # url: jdbc:mysql://localhost:3307/accountsdb
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    # username: root # default name
+    # password: root # default password
+    url: jdbc:h2:mem:testdb # Endpoint details which the application can connect to internal H2 database
+    driver-class-name: org.h2.Driver
+    username: sa # default name
+    password: '' # default password
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update #
     show-sql: true # Print all sql query
-  sql:
-    init:
-      mode: always
+  # sql:
+  #   init:
+  #     mode: always
 
 # Spring doc property
 springdoc:
