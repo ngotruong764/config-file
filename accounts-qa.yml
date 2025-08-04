@@ -6,7 +6,7 @@ spring:
     activate:
       on-profile: qa
   application:
-    name: account
+    name: accounts
   datasource:
     url: jdbc:h2:mem:testdb # Endpoint details which the application can connect to internal H2 database
     driver-class-name: org.h2.Driver
