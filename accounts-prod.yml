@@ -5,8 +5,6 @@ spring:
   config:
     activate:
       on-profile: prod
-  application:
-    name: account
   datasource:
     # url: jdbc:mysql://localhost:3307/accountsdb
     # driver-class-name: com.mysql.cj.jdbc.Driver
